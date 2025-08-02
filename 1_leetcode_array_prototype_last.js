@@ -38,5 +38,8 @@ Array.prototype.last = function() {
     //Determine if the array is > 1
     //if Array is greater than one, return the last element within itself.
     //if array is empty, return -1
-    
+    if (this.length > 0){
+        return this[this.length -1]
+    }
+    return -1
 };
