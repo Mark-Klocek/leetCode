@@ -63,8 +63,17 @@
 
 //Example: [1,1,2,3,4,4,5] => [1,2,3,4,5]
 var removeDuplicates = function(nums) {
-    //P: iterate through the nums array
-    // start at 1st, end at 2nd to last
-    // if arr[i] === arr i-1 || arr i+1, splice(i,i) of the array to remove it
-    // return arr.length
+    //P Iterate through nums backwards
+    // if current element is equal to next (previous when it comes to array), remove current element
+    // remove current element by letting new variable equal to the current element
+    //return the changed nums length
+    
+    for (let i = nums.length -1; i>=0;i--){
+        if (nums[i] === nums[i-1]){
+            let x = nums.splice(i,1)
+        }
+    }
+    return nums.length
+    
+
 };
