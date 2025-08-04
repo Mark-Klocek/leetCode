@@ -35,6 +35,24 @@
  * @param {string} s
  * @return {number}
  */
+//Parameters We are given a string consisting of words and spaces - will a string ever be empty?
+
+//R: We are returning the length of the last word in a sentence
+
+//E: For example, if we have a sentence of "we have a sentence" we want to return 8, because sentence is the last word, and it has a length of 8
+let s = "   fly me   to   the moon  "
 var lengthOfLastWord = function(s) {
-    
+    //P: First we want to break the sentence into an array
+    //Target the last word in that array
+    //Determine if the last "word" in the array is an empty space
+    //continue backwards in the array until you find an element that isn't an empty space
+    //Return the length of that word
+    let sArray = s.split(' ')
+    for(let i = sArray.length -1; i>=0;i--){
+        if (sArray[i]!==""){
+            return sArray[i].length
+        }
+    }
 };
+
+console.log(lengthOfLastWord(s))
