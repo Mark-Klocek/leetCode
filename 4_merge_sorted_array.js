@@ -52,5 +52,12 @@
  * @return {void} Do not return anything, modify nums1 in-place instead.
  */
 var merge = function(nums1, m, nums2, n) {
+    let totalLength = m + n
+    nums1 = nums1.slice(0, n)
+    nums2.forEach(element =>{
+        nums1.push(element)
+    })
+    nums1 = nums1.sort((a,b)=>a-b)
+    
     
 };
