@@ -56,3 +56,5 @@ var lengthOfLastWord = function(s) {
 };
 
 console.log(lengthOfLastWord(s))
+let str = 'This is a string'
+console.log(str.indexOf('is'))
